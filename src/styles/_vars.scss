@@ -121,3 +121,17 @@ $main-transition: all 0.4s ease-in 0s;
       outline: 3px solid $second-color;
    }
 }
+
+@mixin scrollup ($second-color, $primary-color) {
+   display: inline-block;
+   box-sizing: border-box;
+   cursor: pointer;
+   border: 2px solid $second-color;
+   border-radius: 50%;
+   background-color: $primary-color;
+   color: $second-color;
+   transition: $main-transition;
+   overflow: hidden;
+   padding: 15px 17px 10px;
+
+}
