@@ -1,0 +1,162 @@
+.cafe-presentation {
+   background-image: linear-gradient(180deg, #3c21219d 80%, #3c212195 100%), url(../src/img/main-background.jpg), ;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   color: $second-color;
+   min-height: 100vh;
+}
+
+.cafe-presentation__inner {
+   padding-top: 120px;
+   padding-bottom: 20px;
+   max-width: 870px;
+}
+
+.cafe-presentation__uptitle {
+   font-style: italic;
+   font-weight: 600;
+   margin: 10px 0;
+}
+
+.cafe-presentation__title {
+   color: $second-color;
+   text-transform: uppercase;
+   position: relative;
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+   white-space: nowrap;
+
+   &::after {
+      position: absolute;
+      content: '';
+      background-color: $second-color;
+      top: 100%;
+      left: 0;
+      height: 3px;
+      width: 100%;
+   }
+}
+
+.cafe-presentation__content {
+   max-width: 600px;
+   font-weight: 600;
+   font-size: 1.5rem;
+}
+
+.cafe-presentation__service-list {
+   margin-bottom: 40px;
+
+   li {
+      list-style: disc inside none;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      &:first-child {
+         padding-top: 25px;
+      }
+   }
+}
+
+.cafe-presentation__btn {
+   @include vars.main-button-inverse($second-color, $primary-color, 1.5rem)
+}
+
+// Media quaries //
+
+@media (max-width: 1148px) {
+   .cafe-presentation__inner {
+      padding-left: 4.5em;
+      max-width: 605px;
+   }
+
+   .cafe-presentation__title {
+      font-size: 3.5rem;
+   }
+
+   .cafe-presentation__btn {
+      @include vars.main-button-inverse($second-color, $primary-color, 1.2rem);
+   }
+}
+
+@media (max-width: 970px) {
+   .cafe-presentation__inner {
+      padding-left: 4%;
+   }
+}
+
+@media (max-width: 720px) {
+   .cafe-presentation__inner {
+      max-width: 500px;
+      margin: 0 auto;
+      padding-left: 0;
+   }
+
+   .cafe-presentation__uptitle {
+      font-size: 0.9rem;
+      text-align: center;
+   }
+
+   .cafe-presentation__title {
+      font-size: 2.6rem;
+      max-width: 100%;
+      text-align: center;
+   }
+
+   .cafe-presentation__text {
+      margin: 35px 0;
+   }
+
+   .cafe-presentation__content {
+      font-size: 1.2rem;
+      text-align: center;
+   }
+
+   .cafe-presentation__service-list {
+      font-size: 1.4rem;
+
+      li {
+         text-align: left;
+         font-size: 1.1rem;
+      }
+   }
+
+   .cafe-presentation__btn {
+      @include vars.main-button-inverse($second-color, $primary-color, 1.1rem);
+      pointer-events: none;
+   }
+}
+
+@media (max-width: 465px) {
+   .cafe-presentation__inner {
+      max-width: 420px;
+   }
+
+   .cafe-presentation__uptitle {
+      text-align: center;
+   }
+
+   .cafe-presentation__title {
+      font-size: 1.7rem;
+      max-width: fit-content;
+      margin: 0 auto;
+   }
+
+   .cafe-presentation__text {
+      margin: 20px 0;
+   }
+
+   .cafe-presentation__content {
+      font-size: 1.1rem;
+   }
+
+   .cafe-presentation__service-list {
+      font-size: 1.2rem;
+      padding: 0 15px;
+
+      li {
+         list-style: disc outside none;
+         font-size: 1rem;
+      }
+   }
+}

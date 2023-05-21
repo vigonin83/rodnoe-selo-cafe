@@ -1,0 +1,141 @@
+.pool {
+   background-color: $second-color;
+   min-height: 100vh;
+   font-weight: 600;
+
+   &__wrapper {
+      padding-top: 60px;
+      padding-bottom: 50px;
+   }
+
+   &__images {
+      display: flex;
+      gap: 0 1rem;
+      padding-bottom: 20px;
+   }
+
+   &__img {
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 5px;
+      overflow: hidden;
+   }
+
+   &__content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   &__title {
+      text-align: center;
+      position: relative;
+      margin: 0 auto;
+
+      &::before {
+         content: '';
+         background-color: $primary-color;
+         position: absolute;
+         top: 50%;
+         right: 65%;
+         width: 25%;
+         height: 3px;
+      }
+
+      &::after {
+         content: '';
+         background-color: $primary-color;
+         position: absolute;
+         top: 50%;
+         left: 65%;
+         width: 25%;
+         height: 3px;
+      }
+   }
+
+   &__btn {
+      @include vars.main-button($primary-color, $second-color, 1.3rem);
+   }
+}
+
+@media (max-width: 970px) {
+   .pool {
+      font-size: 1.1rem;
+      min-height: auto;
+
+      &__content {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         row-gap: 30px;
+         align-items: center;
+      }
+
+      &__title {
+         &::before {
+            right: -50%;
+            width: 45%;
+            height: 2px;
+         }
+
+         &::after {
+            left: -50%;
+            width: 45%;
+            height: 2px;
+         }
+      }
+   }
+
+   .pool__wrapper {
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+
+   .pool__play-list {
+      margin: 0;
+      padding: 0;
+   }
+
+   .pool__text {
+      padding: 0;
+      margin: 0;
+   }
+
+   .pool__btn {
+      @include vars.main-button($primary-color, $second-color, 1.1rem)
+   }
+}
+
+@media (max-width: 568px) {
+   .pool {
+      font-size: 1rem;
+   &__title {
+      font-size: 2rem;
+   }
+   &__content {
+         row-gap: 20px;
+      }
+   }
+
+.pool__list-title {
+   font-size: 1.6rem;
+}
+
+.pool__img .img3 {
+   display: none;
+}
+
+.pool__btn {
+   @include vars.main-button($primary-color, $second-color, 1rem)
+}
+}
+
+
+@media (max-width: 465px) {
+   .pool {
+      &__wrapper {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+   }
+}

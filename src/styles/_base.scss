@@ -1,0 +1,95 @@
+@use 'vars';
+@import 'vars';
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 4px;
+  background-color: $primary-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 0.4rem;
+  box-shadow: inset 1px 1px 10px #5c3c24;
+}
+
+// ::-webkit-scrollbar-button {
+//   background-color: blue;
+// }
+::-webkit-scrollbar-track {
+  background-color: #fdd6bbb0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include vars.main-text;
+  box-sizing: border-box;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  @include vars.main-title;
+}
+
+h2 {
+  @include vars.second-title;
+}
+
+h3 {
+  @include vars.third-title;
+}
+
+h4 {
+  @include vars.fourth-title;
+}
+
+h5 {
+  @include vars.fifth-title;
+}
+
+.container {
+  @include vars.container;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}

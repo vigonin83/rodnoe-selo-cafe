@@ -1,0 +1,147 @@
+.apparts {
+   background-color: $primary-color;
+   color: $second-color;
+   min-height: 50vh;
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 0 60px;
+   }
+
+   &__title {
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         right: 0;
+         background-color: $second-color;
+         width: 29%;
+         height: 3px;
+      }
+   }
+}
+
+.apparts__content {
+   padding-right: 30px;
+}
+
+.apparts__img {
+   max-width: 50%;
+   flex: 0 3 auto;
+   border-radius: 5px;
+}
+
+.apparts__btn {
+   @include vars.main-button-inverse($second-color, $primary-color, 1.3rem);
+   display: block;
+   margin-top: 1.32rem;
+}
+
+@media (max-width: 970px) {
+   .apparts {
+      font-size: 1.1rem;
+
+      &__title {
+         font-size: 2.5rem;
+         margin-bottom: 30px;
+
+         &::after {
+            right: 0;
+            width: 20%;
+            height: 2px;
+         }
+      }
+
+      &__wrapper {
+         padding-top: 30px;
+         padding-bottom: 40px;
+      }
+
+   }
+
+   .apparts__content {
+      padding-right: 15px;
+   }
+
+   .apparts__price {
+      display: block
+   }
+
+   .apparts__btn {
+      @include vars.main-button-inverse($second-color, $primary-color, 1.1rem);
+
+   }
+}
+
+@media (max-width: 720px) {
+   .apparts__wrapper {
+      padding: 20px 0 40px;
+      flex-direction: column;
+      row-gap: 40px;
+      align-items: center;
+      text-align: center;
+   }
+
+   .apparts__title {
+      margin-bottom: 20px;
+
+      &::before {
+         content: '';
+         position: absolute;
+         height: 2px;
+         top: 50%;
+         background-color: $second-color;
+         width: 25%;
+         left: 0;
+      }
+
+      &::after {
+         right: 0;
+         width: 25%;
+      }
+   }
+
+   .apparts__img {
+      max-width: 100%;
+    }
+
+   .apparts__content {
+      padding-right: 0;
+   }
+}
+
+@media (max-width: 568px) {
+   .apparts {
+      font-size: 1rem;
+
+      &__title {
+         font-size: 2rem;
+      }
+   }
+
+   .apparts__btn {
+      @include vars.main-button($second-color, $primary-color, 1rem)
+   }
+}
+
+@media (max-width: 465px) {
+   .apparts__wrapper {
+      padding: 15px 0 30px;
+      row-gap: 30px;
+   }
+
+   .apparts__title {
+      margin-bottom: 10px;
+
+      &::before {
+         display: none;
+      }
+
+      &::after {
+         display: none;
+      }
+   }
+}

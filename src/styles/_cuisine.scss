@@ -1,0 +1,349 @@
+.cuisine {
+   background-color: $second-color;
+   color: $primary-color;
+   font-weight: 600;
+
+   &__wrapper {
+      padding-top: 40px;
+      padding-bottom: 60px;
+   }
+
+   &__title {
+      text-align: center;
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 40px;
+      gap: 0 3rem;
+      align-items: flex-start;
+   }
+
+   &__img {
+      border-radius: 5px;
+      max-width: 45%;
+   }
+}
+
+.menu__title {
+   position: relative;
+
+   &::after {
+      content: '';
+      background-color: $primary-color;
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      width: 20%;
+      height: 3px;
+   }
+}
+
+.cookery__title {
+   position: relative;
+   text-align: end;
+
+   &::after {
+      content: '';
+      background-color: $primary-color;
+      position: absolute;
+      top: 50%;
+      right: 35%;
+      width: 20%;
+      height: 3px;
+   }
+}
+
+.cookery__text {
+   text-align: end;
+}
+
+.delivery__title {
+   position: relative;
+
+   &::after {
+      content: '';
+      background-color: $primary-color;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      width: 20%;
+      height: 3px;
+   }
+}
+
+.delivery__text {
+   padding-bottom: 20px;
+}
+
+.cuisine__delivery {
+   padding-bottom: 0;
+}
+
+.delivery__btn {
+   @include vars.main-button($primary-color, $second-color, 1.3rem);
+}
+
+@media (max-width: 1148px) {
+   .cuisine {
+      &__inner {
+         gap: 0 1rem;
+      }
+   }
+
+   .menu__text p,
+   .cookery__text p,
+   .delivery__text p {
+      margin: 0.5rem 0;
+   }
+
+}
+
+@media (max-width: 970px) {
+   .cuisine {
+      font-size: 1.1rem;
+
+      &__wrapper {
+         padding-top: 30px;
+
+         h3 {
+            font-size: 1.8rem;
+         }
+      }
+
+      &__title {
+         font-size: 2.5rem;
+         margin-bottom: 30px;
+      }
+
+      &__inner {
+         gap: 0 0.7rem;
+      }
+
+      &__img {
+         max-width: 55%;
+      }
+   }
+
+   .menu__title {
+
+      &::after {
+         width: 20%;
+         height: 2px;
+         left: 25%;
+      }
+   }
+
+   .cookery__title {
+      &::after {
+         width: 20%;
+         right: 40%;
+         height: 2px;
+      }
+   }
+
+   .delivery__title {
+      &::after {
+         width: 20%;
+         height: 2px;
+         right: 45%;
+      }
+   }
+
+   .menu__text p,
+   .cookery__text p,
+   .delivery__text p {
+      margin-top: 0.3rem;
+   }
+}
+
+@media (max-width: 830px) {
+   .cuisine {
+      &__wrapper {
+         padding-left: 60px;
+         padding-right: 60px;
+      }
+
+      &__inner {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+      }
+
+      &__img {
+         max-width: 100%;
+      }
+   }
+
+   .cuisine__cookery {
+      flex-direction: column-reverse;
+   }
+
+   .cookery__text {
+      text-align: center;
+   }
+
+   .menu__title {
+
+      &::before {
+         content: '';
+         background-color: $primary-color;
+         position: absolute;
+         top: 50%;
+         right: 20%;
+         width: 20%;
+         height: 2px;
+      }
+
+      &::after {
+         width: 20%;
+         height: 2px;
+         left: 20%;
+      }
+   }
+
+   .cuisine__content {
+      padding-bottom: 40px;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50;
+         left: 50%;
+         transform: translateX(-50%);
+         background-color: $primary-color;
+         height: 2px;
+         width: 8%;
+         margin-top: 13px;
+      }
+   }
+
+   .cookery__title {
+      text-align: center;
+
+      &::before {
+         content: '';
+         background-color: $primary-color;
+         position: absolute;
+         top: 50%;
+         left: 13%;
+         width: 20%;
+         height: 2px;
+      }
+
+      &::after {
+         width: 20%;
+         height: 2px;
+         left: 67%;
+      }
+   }
+
+   .delivery__title {
+      &::before {
+         content: '';
+         background-color: $primary-color;
+         position: absolute;
+         top: 50%;
+         left: 15%;
+         width: 20%;
+         height: 2px;
+      }
+
+      &::after {
+         width: 20%;
+         height: 2px;
+         right: 15%;
+      }
+   }
+
+}
+
+@media (max-width: 830px) {
+   .cuisine {
+      &__wrapper {
+         padding: 20px 60px 40px;
+      }
+   }
+}
+
+@media (max-width: 568px) {
+   .cuisine {
+      font-size: 1rem;
+
+      &__wrapper {
+         padding: 20px 10px 20px;
+
+         h3 {
+            font-size: 1.6rem;
+         }
+      }
+
+      &__inner {
+         padding-bottom: 20px;
+      }
+
+      &__title {
+         font-size: 2rem;
+         margin-bottom: 10px;
+      }
+   }
+}
+
+@media (max-width: 465px) {
+   .cuisine {
+      &__wrapper {
+         padding: 15px 0 10px;
+      }
+
+      &__title {
+         margin-bottom: 5px;
+      }
+
+      &__content {
+         padding-bottom: 30px;
+
+         &::after {
+            margin-top: 7px;
+         }
+      }
+   }
+
+   .menu__title {
+
+      &::before {
+         content: '';
+         right: 15%;
+      }
+
+      &::after {
+         left: 15%;
+      }
+   }
+
+   .cookery__title {
+      text-align: center;
+
+      &::before {
+         content: '';
+         left: 8%;
+      }
+
+      &::after {
+         left: 72%;
+      }
+   }
+
+   .delivery__title {
+      &::before {
+         left: 10%;
+      }
+
+      &::after {
+         right: 10%;
+      }
+   }
+
+
+}

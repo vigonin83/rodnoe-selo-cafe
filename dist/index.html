@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="img/favicon.png" sizes="256x256" />
+    <meta name="theme-color" content="#3c2121" />
+    <title>Родное село - Кафе</title>
+  <script defer src="main.js"></script><script defer src="apparts.js"></script><script defer src="notFound.js"></script><script defer src="developmentPage.js"></script></head>
+  <body>
+    <div class="wrapper">
+      <header class="header lock-padding">
+        <div class="container">
+          <div class="header__inner">
+            <nav class="menu">
+              <ul class="menu-list menu-left">
+                <li data-goto=".section__main" class="menu__list-item"><a href="#" class="menu__list-link">О Кафе</a></li>
+                <li data-goto=".section__dishes" class="menu__list-item"><a href="#cuisine" class="menu__list-link">Кухня</a></li>
+                <li data-goto=".section__banquets" class="menu__list-item"><a href="#event" class="menu__list-link">Банкеты</a></li>
+                <li data-goto=".section__events" class="menu__list-item"><a href="#pool" class="menu__list-link">Бильярд</a></li>
+                <li class="menu__list-item"><a href="#delivery" class="menu__list-link">Доставка</a></li>
+              </ul>
+              <a class="logo" href="#"><img class="logo-img" src="img/main-logo-525X197.png" alt="Логотип Родное село" /></a>
+              <ul class="menu-list menu-right">
+                <li data-goto=".section__apparts" class="menu__list-item"><a href="#aparts" class="menu__list-link">Аппартаменты</a></li>
+                <li data-goto=".section__contacts" class="menu__list-item"><a href="#contacts" class="menu__list-link">Контакты</a></li>
+                <li class="menu__list-item menu__phone"><a href="#" class="menu__list-link">+7 (989) 989-69-99</a></li>
+              </ul>
+              <a class="phone-call__link" href="tel:+79998883344"><img src="img/phone-call.png" alt="телефон" /></a>
+              <button class="menu-burger__btn" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <ul class="menu-burger">
+                <li class="menu__list-item"><a href="#" class="menu__link">Кафе</a></li>
+                <li class="menu__list-item"><a href="#cuisine" class="menu__link">Наша кухня</a></li>
+                <li class="menu__list-item"><a href="#pool" class="menu__link">Бильярд</a></li>
+                <li class="menu__list-item"><a href="#delivery" class="menu__link">Доставка</a></li>
+                <li class="menu__list-item"><a href="#aparts" class="menu__link">Аппартаменты</a></li>
+                <li class="menu__list-item"><a href="#contacts" class="menu__link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section id="cafe-presentation" class="cafe-presentation section__main">
+          <div class="container">
+            <div class="cafe-presentation__inner">
+              <p class="cafe-presentation__uptitle">Место куда хочется возвращаться как домой...</p>
+              <h1 class="cafe-presentation__title title">" Родное Село "</h1>
+              <div class="cafe-presentation__content">
+                <p class="cafe-presentation__text">Мы приглашаем Вас дорогие гости отведать домашние блюда и отдохнуть у русской печи.</p>
+                <ul class="cafe-presentation__service-list">
+                  Для Вас:
+                  <li class="cafe-presentation__item">Вкусные блюда и напитки</li>
+                  <li class="cafe-presentation__item">Свежая выпечка и кулинария</li>
+                  <li class="cafe-presentation__item">Доставка, кухня на заказ</li>
+                  <li class="cafe-presentation__item">Бильярд, аэрохоккей, настольные игры</li>
+                  <li class="cafe-presentation__item">Проведение банкетов и мероприятий</li>
+                  <li class="cafe-presentation__item">Аппартаменты</li>
+                </ul>
+                <button type="button" href="#popup" class="cafe-presentation__btn popup-link">Связаться с нами</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="cuisine section__cuisine">
+          <div class="container">
+            <div class="cuisine__wrapper">
+              <h2 class="cuisine__title">Наша кухня</h2>
+              <div class="cuisine__inner cuisine__menu">
+                <div id="cuisine" class="cuisine__content menu__content">
+                  <h3 class="menu__title">Меню</h3>
+                  <div class="menu__text">
+                    <p>
+                      В нашем кафе Вы можете отведать блюда "Русской кухни", включая наши фирменные <span>"Щи из печи".</span> Настоящие аппетитные домашние щи
+                      приготовленные в печи на углях по-старинному рецепту.
+                    </p>
+                    <p>
+                      Мы также будем рады предложить Вам от души блюда с мангала, пироги, пиццу и сладкую выпечку. Более подробно ознакомиться с
+                      <a href="/menu">меню</a> можно здесь.
+                    </p>
+                    <p>Приходите к нам и отведайте!</p>
+                  </div>
+                </div>
+                <img class="cuisine__img" src="img/menu.jpg" alt="Меню" />
+              </div>
+              <div class="cuisine__inner cuisine__cookery">
+                <img class="cuisine__img" src="img/сookery.jpg" alt="Кулинария" />
+                <div class="cuisine__content cookery__content">
+                  <h3 class="cookery__title">Кулинария</h3>
+                  <div class="cookery__text">
+                    <p>
+                      У нас также осуществляется продажа продуктов собственного приготовления: свежий и ароматный хлеб, домашний сыр, копченая на бруньках рулька, пельмени ручной
+                      лепки и другие кулинарные изделия.
+                    </p>
+                    <p>С большим удовольствием приготовим на заказ кулинарные изделия и блюда, учитывая Ваши вкусы и пожелания.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="delivery" class="cuisine__inner cuisine__delivery">
+                <div class="cuisine__content delivery__content">
+                  <h3 class="delivery__title">Доставка</h3>
+                  <div class="delivery__text">
+                    <p>Мы осуществим доставку продуктов и блюд до места Вашего отдыха или проживания.</p>
+                    <p>Подробнее о порядке и зоне действия доставки можно ознакомиться <a href="">здесь.</a></p>
+                  </div>
+                  <button class="delivery__btn popup-link btn" href="#popup">Заказать</button>
+                </div>
+                <img class="cuisine__img" src="img/delivery.jpg" alt="доставка" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="event" class="event section__event">
+          <div class="event__wrapper">
+            <h2 class="event__title">Банкеты и мероприятия</h2>
+            <div class="event__gallery-box">
+              <div class="event-mainhall__images">
+                <img class="mainhall__img img1" src="img/dancefloor.jpg" alt="Танцпол" />
+                <img class="mainhall__img img2" src="img/event.jpg" alt="Праздник" />
+                <img class="mainhall__img img3" src="img/bar.jpg" alt="Бар" />
+                <img class="mainhall__img img4" src="img/banquete.jpg" alt="БанкетR" />
+                <img class="mainhall__img img5" src="img/main-hall.jpg" alt="Основной зал" />
+              </div>
+            </div>
+            <div class="container event__contatainer">
+              <div class="mainhall__content">
+                <div class="mainhall__capacity">
+                  <h5 class="mainhall__capacity-title">до 30 человек</h5>
+                  <span class="mainhall__capacity-text">вместимость зала</span>
+                </div>
+                <div class="mainhall__main">
+                  <h5 class="mainhall__main-title">Основной зал</h5>
+                  <span class="mainhall__main-text">1-й этаж кафе</span>
+                </div>
+                <div class="mainhall__features">
+                  <h5 class="mainhall__features-title">Возможности</h5>
+                  <span class="mainhall__main-text">Музыкальная система, ТВ, караоке, танцпол</span>
+                </div>
+              </div>
+            </div>
+            <button class="event__btn popup-link" type="button" href="#popup">Заказать банкет</button>
+            <div class="container event__contatainer">
+              <div class="secondhall__content">
+                <div class="secondhall__capacity">
+                  <h5 class="secondhall__capacity-title">до 30 человек</h5>
+                  <span class="secondhall__capacity-text">вместимость зала</span>
+                </div>
+                <div class="secondhall__main">
+                  <h5 class="secondhall__main-title">Зал "Медвежий угол"</h5>
+                  <span class="secondhall__main-text">2-й этаж кафе</span>
+                </div>
+                <div class="secondhall__features">
+                  <h5 class="secondhall__features-title">Возможности</h5>
+                  <span class="secondhall__main-text">ТВ, караоке</span>
+                </div>
+              </div>
+            </div>
+            <div class="event__gallery-box">
+              <div class="event-secondhall__images">
+                <img class="secondhall__img secondhall-img1" src="img/bear-corner-hall.jpg" alt="основной зал" />
+                <img class="secondhall__img secondhall-img2" src="img/bear-corner.jpg" alt="основной зал" />
+                <img class="secondhall__img secondhall-img3" src="img/bear-corner-window.jpg" alt="основной зал" />
+                <img class="secondhall__img secondhall-img4" src="img/bear-corner-bar.jpg" alt="основной зал" />
+                <img class="secondhall__img secondhall-img5" src="img/bear.jpg" alt="основной зал" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="pool" class="pool section__pool">
+          <div class="container">
+            <div class="pool__wrapper">
+              <div class="pool__images">
+                <img class="pool__img img1" src="img/pool-2.jpg" alt="Русский бильярд" />
+                <img class="pool__img img2" src="img/pool-1.jpg" alt="Русский бильярд" />
+                <img class="pool__img img3" src="img/pool-4.jpg" alt="Русский бильярд" />
+              </div>
+              <div class="pool__content">
+                <h3 class="pool__title">Бильярд</h3>
+                <p class="pool__text">В нашем кафе у Вас есть прекрасная возможность интересно и увлекательно провести время, сыграв на "русском" бильярде или сразиться в аэрохоккей.</p>
+                <h4 class="pool__list-title">К вашим услугам:</h4>
+                <ul class="pool__play-list">
+                  <li class="play-list__item">Русская пирамида: 444 р./час</li>
+                  <li class="play-list__item">Американский пул: 333 р./час</li>
+                  <li class="play-list__item">Аэрохоккей: 55 р./15 мин.</li>
+                </ul>
+                <button class="pool__btn popup-link btn" href="#popup">Заказать игру</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="aparts" class="apparts section__apparts">
+          <div class="container">
+            <div class="apparts__wrapper">
+              <div class="apparts__content">
+                <h2 class="apparts__title">Аппартаменты</h2>
+                <p class="apparts__text">
+                  Едите ли вы мимо в путешествие, находитесь рядом с нами по своим делам или просто хотите скрыться от повседневной городской суеты в нашем "селе"...<br />
+                  Мы готовы предложить Вам погостить в уютных комнатах.
+                </p>
+                <span class="apparts__price">Цена от 2 000 руб.</span>
+                <button class="apparts__btn popup-link" href="#popup">Выбрать комнату</button>
+              </div>
+              <img class="apparts__img" src="img/room-museum.jpg" alt="Музейная комната" />
+            </div>
+          </div>
+        </section>
+        <footer id="contacts" class="contacts section__contacts">
+          <div class="container">
+            <div class="contacts__inner">
+              <h2 class="contacts__title">Наши контакты</h2>
+              <div class="contacts__content">
+                <div class="contacts__address">
+                  <h4 class="address__title">Адрес:</h4>
+                  <span class="address__text"
+                    >Московская обл., Ступинский р-н, <br />
+                    с.Хатунь, ул.Советская, д.13/2</span
+                  >
+                </div>
+                <div class="contacts__open-time">
+                  <h4 class="open-time__title">Часы работы:</h4>
+                  <span class="open-time__text">Ежедневно, 10:30 - 23:30</span>
+                </div>
+                <div class="contacts__phone">
+                  <h4 class="phone__title">Телефон:</h4>
+                  <span class="phone__text">+7 (985) 999-99-99</span>
+                </div>
+                <div class="contacts__e-mail">
+                  <h4 class="e-mail__title">Написать нам:</h4>
+                  <span class="e-mail__text">rodnoe-selo@yandex.ru</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <div id="popup" class="popup popup__form">
+      <div class="popup__body popup__form-body">
+        <div class="popup__content popup__form-content">
+          <a href="#" class="popup__close popup--close">Х</a>
+          <form action="#" method="get" id="form" class="form">
+            <h6 class="form__title">Форма закза</h6>
+            <div class="form__item">
+              <label for="formName" class="form__label">Имя *:</label>
+              <input id="formName" type="text" name="name" placeholder="Имя" class="form__input" />
+            </div>
+            <div class="form__item">
+              <label for="formPhone" class="form__label">Телефон *:</label>
+              <input id="formPhone" type="tel" name="phone" placeholder="+7(999)999-44-33" class="form__input" />
+            </div>
+            <div class="form__item">
+              <label for="formEmail" class="form__label">Электронная почта *:</label>
+              <input id="formEmail" type="email" name="email" placeholder="example@example.ru" class="form__input" />
+            </div>
+            <div class="form__item">
+              <label for="formMessage" class="form__label">Комментарии к заказу:</label>
+              <textarea id="formMessage" name="message" placeholder="Дата, время, Ваши пожелания..." class="form__input"></textarea>
+            </div>
+            <button type="submit" class="form__btn">Отправить</button>
+            <div class="div">
+              <input type="checkbox" checked name="personal-data" class="form__checkbox" />
+              <span class="form__note">Нажимая на кнопку “Отправить”, вы даете согласие на обработку своих персональных данных.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
