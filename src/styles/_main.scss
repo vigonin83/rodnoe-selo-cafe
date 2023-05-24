@@ -17,6 +17,14 @@
    font-style: italic;
    font-weight: 600;
    margin: 10px 0;
+   opacity: 0;
+   transform: translateY(-700%);
+}
+
+.cafe-presentation__uptitle.__active {
+   transition: $slower-transition;
+   transform: translateY(0%);
+   opacity: 1;
 }
 
 .cafe-presentation__title {
@@ -26,6 +34,8 @@
    padding-bottom: 10px;
    margin-bottom: 10px;
    white-space: nowrap;
+   transform: translateX(-130%);
+   opacity: 0;
 
    &::after {
       position: absolute;
@@ -38,10 +48,24 @@
    }
 }
 
+.cafe-presentation__title.__active {
+   transform: translateX(0);
+   transition: $slower-transition;
+   opacity: 1;
+}
+
 .cafe-presentation__content {
    max-width: 600px;
    font-weight: 600;
    font-size: 1.5rem;
+   transform: translateX(170%);
+   opacity: 0;
+}
+
+.cafe-presentation__content.__active {
+   transform: translateX(0%);
+   transition: $slower-transition;
+   opacity: 1;
 }
 
 .cafe-presentation__service-list {
@@ -70,20 +94,24 @@
    margin-bottom: 1rem;
    opacity: 0;
    visibility: hidden;
+   z-index: 10;
    @include vars.scrollup($second-color, $primary-color);
 }
 
 .scrollup-btn.__active {
-   opacity: 1;
+   opacity: 0.6;
    visibility: visible;
+
    &:hover {
-      opacity: 0.8;
+      opacity: 1;
+      transition: $main-transition;
    }
 }
 
 .scrollup-btn__img {
    width: 20px;
    filter: invert(99%) sepia(22%) saturate(4048%) hue-rotate(298deg) brightness(107%) contrast(111%);
+
 }
 
 // Media quaries //
