@@ -135,6 +135,10 @@
    .cafe-presentation__inner {
       padding-left: 4%;
    }
+
+   .cafe-presentation__btn.__disabled {
+      @include vars.main-button-inverse-noHover($second-color, $primary-color, 1.2rem);
+   }
 }
 
 @media (max-width: 720px) {
@@ -172,12 +176,6 @@
          font-size: 1.1rem;
       }
    }
-
-   .cafe-presentation__btn {
-      @include vars.main-button-inverse($second-color, $primary-color, 1.1rem);
-      pointer-events: none;
-   }
-
 }
 
 @media (max-width: 465px) {
@@ -211,5 +209,10 @@
          list-style: disc outside none;
          font-size: 1rem;
       }
+   }
+
+   .scrollup-btn {
+      padding: 12px 15px 8px;
+      margin-right: 0.5rem;
    }
 }

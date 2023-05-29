@@ -2,7 +2,7 @@ import './index.html'
 import './index.scss'
 import { popupOpen, popupClose } from './js/popup.js'
 import { addPadding, removePadding, goToTop } from './js/utils.js'
-import Swiper, { Navigation } from 'swiper'
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
@@ -33,7 +33,7 @@ const swiper = new Swiper('.swiper', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
-	}
+	},
 })
 //----- activate slider swiper -----//
 

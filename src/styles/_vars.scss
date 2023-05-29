@@ -90,8 +90,36 @@ $slower-transition: all 0.8s ease 0s;
    padding: 8px;
    width: 170px;
    text-align: center;
+   box-shadow: 0 2px 4px rgba(#000, .4);
 
    &:hover {
+      background-color: $hover-secondBtn;
+      color: $primary-color;
+      border-color: $primary-color;
+   }
+}
+
+@mixin main-button-noHover ($primary-color, $second-color, $font-size) {
+   display: inline-block;
+   box-sizing: border-box;
+   cursor: pointer;
+   border: 2px solid transparent;
+   border-radius: 10px;
+   background-color: $primary-color;
+   color: $second-color;
+   font-weight: 700;
+   font-size: $font-size;
+   letter-spacing: 0.1rem;
+   text-decoration: none;
+   transition: $main-transition;
+   overflow: hidden;
+   white-space: nowrap;
+   padding: 8px;
+   width: 170px;
+   text-align: center;
+   box-shadow: 0 2px 4px rgba(#000, .4);
+
+   &:focus {
       background-color: $hover-secondBtn;
       color: $primary-color;
       border-color: $primary-color;
@@ -115,8 +143,36 @@ $slower-transition: all 0.8s ease 0s;
    white-space: nowrap;
    padding: 10px;
    text-align: center;
+   box-shadow: 0 2px 4px rgba(#000, .4);
 
    &:hover {
+      background-color: $hover-mainBtn;
+      color: $second-color;
+      outline: 3px solid $second-color;
+   }
+}
+
+@mixin main-button-inverse-noHover ($second-color, $primary-color, $font-size) {
+   display: inline-block;
+   box-sizing: border-box;
+   cursor: pointer;
+   border: 2px solid $primary-color;
+   border-radius: 10px;
+   background-color: $second-color;
+   color: $primary-color;
+   font-weight: 700;
+   font-size: $font-size;
+   letter-spacing: 0.1rem;
+   text-decoration: none;
+   transition: $main-transition;
+   overflow: hidden;
+   white-space: nowrap;
+   padding: 10px;
+   text-align: center;
+   outline: none;
+   box-shadow: 0 2px 4px rgba(#000, .4);
+
+   &:focus {
       background-color: $hover-mainBtn;
       color: $second-color;
       outline: 3px solid $second-color;

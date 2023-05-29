@@ -9,6 +9,7 @@
    opacity: 0;
    visibility: hidden;
    overflow: hidden;
+   z-index: 10000;
 }
 
 .popup.popup--open {
@@ -39,10 +40,7 @@
    right: 10px;
    top: 10px;
 }
-// .form {
-//    // margin: 0 auto;
-//    // text-align: center;
-// }
+
 .form__title {
    font-size: 1.5rem;
    margin-bottom: 20px;
@@ -88,4 +86,10 @@ textarea.form__input {
 .form__note {
    font-size: 1rem;
    line-height: 0.7;
+}
+
+@media (max-width: 970px) {
+   .form__btn.__disabled {
+      @include vars.main-button-noHover($primary-color, $second-color, 1.3rem);;
+   }
 }

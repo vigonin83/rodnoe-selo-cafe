@@ -156,13 +156,16 @@
    .delivery__text p {
       margin-top: 0.3rem;
    }
+
+   .delivery__btn.__disabled {
+      @include vars.main-button-noHover($primary-color, $second-color, 1.2rem);
+   }
 }
 
 @media (max-width: 830px) {
    .cuisine {
       &__wrapper {
-         padding-left: 60px;
-         padding-right: 60px;
+         padding: 20px 60px 40px;
       }
 
       &__inner {
@@ -206,18 +209,6 @@
    .cuisine__content {
       padding-bottom: 40px;
       position: relative;
-
-      &::after {
-         content: '';
-         position: absolute;
-         top: 50;
-         left: 50%;
-         transform: translateX(-50%);
-         background-color: $primary-color;
-         height: 2px;
-         width: 8%;
-         margin-top: 13px;
-      }
    }
 
    .cookery__title {
@@ -260,13 +251,6 @@
 
 }
 
-@media (max-width: 830px) {
-   .cuisine {
-      &__wrapper {
-         padding: 20px 60px 40px;
-      }
-   }
-}
 
 @media (max-width: 568px) {
    .cuisine {

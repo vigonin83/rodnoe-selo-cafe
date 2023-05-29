@@ -84,6 +84,7 @@
             height: 2px;
          }
       }
+
    }
 
    .pool__wrapper {
@@ -101,33 +102,31 @@
       margin: 0;
    }
 
-   .pool__btn {
-      @include vars.main-button($primary-color, $second-color, 1.1rem)
+   .pool__btn.__disabled {
+      @include vars.main-button-noHover($primary-color, $second-color, 1.2rem)
    }
 }
 
 @media (max-width: 568px) {
    .pool {
       font-size: 1rem;
-   &__title {
-      font-size: 2rem;
-   }
-   &__content {
+
+      &__title {
+         font-size: 2rem;
+      }
+
+      &__content {
          row-gap: 20px;
       }
    }
 
-.pool__list-title {
-   font-size: 1.6rem;
-}
+   .pool__list-title {
+      font-size: 1.6rem;
+   }
 
-.pool__img .img3 {
-   display: none;
-}
-
-.pool__btn {
-   @include vars.main-button($primary-color, $second-color, 1rem)
-}
+   .pool__img .img3 {
+      display: none;
+   }
 }
 
 

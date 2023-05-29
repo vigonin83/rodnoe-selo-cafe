@@ -95,7 +95,11 @@
 
 @media (max-width: 970px) {
    .header {
-      padding: 20px;
+      position: fixed;
+      background-color: #fdd6bb;
+      padding: 10px 20px;
+      z-index: 9999;
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
    }
 
    .menu {
